@@ -54,3 +54,8 @@ Ressources disponibles :
 * [GET, POST] /api.php/burgeringredients/
 * [UPDATE, DELETE] /api.php/burgeringredients/:id
 * [GET] /api.php/burgeringredients/byburger/:id
+
+Copyright
+====================
+
+Les images utilisées sont © McDonald's France
