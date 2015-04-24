@@ -1,0 +1,22 @@
+{
+  "name": "BurgerFactory",
+  "type": "silex-starter",
+  "description": "BurgerFactory",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Julien Huon",
+      "email": "julien.huon@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "silex/silex": "~1.2",
+    "doctrine/dbal": "~2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "BurgerFactory\\": "src/"
+    }
+  }
+}

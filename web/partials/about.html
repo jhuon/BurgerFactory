@@ -1,0 +1,60 @@
+<header class="page-header">
+    <h1>About</h1>
+</header>
+
+<section class="col-md-8 col-md-offset-2">
+    <p class="lead">Burger Factory est une application fictive réalisée pour <a href="http://www.aquafadas.com" target="_blank">Aquafadas</a>.</p>
+    <p>Réalisé par Julien Huon<br>10 rue Saint-Claude<br>34000 Montpellier<br>06 88 58 51 19<br><a href="mailto:julien.huon@gmail.com">julien.huon@gmail.com</a><br><a href="http://www.julienhuon.com">www.julienhuon.com</a></p>
+
+    <hr/>
+
+    <h3>Front-end</h3>
+    <p>Le front-end utilise les outils et technologies suivants :</p>
+    <ul>
+        <li>Les langages HTML5, CSS3, JavaScript</li>
+        <li>Bootstrap, framework CSS</li>
+        <li>AngularJS, framework JavaScript</li>
+        <li>Bower, gestionnaire de paquet</li>
+        <li>LESS, preprocesseur CSS</li>
+    </ul>
+
+    <h3>Back-end</h3>
+    <p>Le back-end utilise les outils et technologies suivants :</p>
+    <ul>
+        <li>Les languages PHP, JSON et SQL</li>
+        <li>Une base SQLite pour stocker les données</li>
+        <li>le micro-framework Silex</li>
+        <li>Doctrine DBAL pour accéder aux données</li>
+    </ul>
+
+    <h3>Structure de l'application</h3>
+    <ul>
+        <li>/database : contient la base SQLite, ainsi que le schema SQL et quelques fixtures</li>
+        <li>/src : contient le code de l'API</li>
+        <li>/vendor : dépendances pour le back-end</li>
+        <li>/web : contient le code du front-end
+            <ul>
+                <li>/web/components : dependances pour le front-end</li>
+                <li>/web/css : feuille de styles, fichier LESS</li>
+                <li>/web/images : images de burger utilisées</li>
+                <li>/web/js : le code JavaScript de l'application</li>
+                <li>/web/partials : les fichiers HTML utilisé comme vues</li>
+                <li>/web/api.php : le point d'accès à l'API</li>
+                <li>/web/index.html : le point d'accès au front-end</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>API</h3>
+    <p>Ressources disponibles :</p>
+    <ul>
+        <li>[GET, POST] /api.php/burgers/</li>
+        <li>[UPDATE, DELETE] /api.php/burgers/:id</li>
+        <li>[GET, POST] /api.php/ingredients/</li>
+        <li>[UPDATE, DELETE] /api.php/ingredients/:id</li>
+        <li>[GET, POST] /api.php/burgeringredients/</li>
+        <li>[UPDATE, DELETE] /api.php/burgeringredients/:id</li>
+        <li>[GET] /api.php/burgeringredients/byburger/:id</li>
+    </ul>
+
+</section>

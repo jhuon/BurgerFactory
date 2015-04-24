@@ -1,0 +1,58 @@
+<header class="page-header">
+    <h1>{{ burger.name }}</h1>
+</header>
+
+<div class="row">
+    <div class="burger-detail col-md-7">
+        <div class="row">
+            <div class="burger-image col-md-6">
+                <img class="img-responsive" ng-src="{{ burger.image }}" alt="{{ burger.name }}"/>
+            </div>
+            <dl class="burger-meta col-md-5">
+                <dt>Date</dt>
+                <dd>{{ burger.created_at | dateToISO | date:'dd/MM/yyyy HH:mm' }}</dd>
+                <dt>Version</dt>
+                <dd>{{ burger.version }}</dd>
+            </dl>
+
+        </div>
+        <div class="burger-description">
+            <p>{{ burger.description }}</p>
+        </div>
+
+    </div>
+
+    <div class="col-md-5">
+        <table class="burger-ingredients table table-bordered">
+            <thead>
+                <tr>
+                    <th width="50%">Ingredient</th>
+                    <th>Niveau d'épice</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody as-sortable ng-model="burgeringredients">
+                <tr ng-repeat="burgeringredient in burgeringredients | orderBy:'weight'" as-sortable-item as-sortable-item-handle>
+                    <td>{{ burgeringredient.name }}</td>
+                    <td>{{ burgeringredient.spicy_level }}</td>
+                    <td class="text-center"><button type="button" class="btn btn-xs btn-default" ng-click="removeIngredient(burgeringredient.id)"><i class="glyphicon glyphicon-remove"></i></button></td>
+                </tr>
+                <tr ng-show="!burgeringredients.length">
+                    <td colspan="4">Aucun ingredient</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form name="addIngredientForm" ng-submit="addIngredient()">
+            <div class="form-group">
+                <label for="add-ingredient">Ajouter un ingredient</label>
+                <select id="add-ingredient" class="form-control" ng-model="selectedIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients"></select>
+            </div>
+            <input type="submit" value="Ajouter" class="btn btn-default">
+        </form>
+    </div>
+</div>
+
+<hr/>
+
+<p class="text-center"><a href="/#/burgers/{{ burger.id }}/edit" class="btn btn-default btn-lg">Modifier le Burger</a></p>

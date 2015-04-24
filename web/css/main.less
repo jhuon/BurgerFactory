@@ -1,0 +1,274 @@
+//
+// Imports
+// --------------------------------------------------
+
+@import "../components/bootstrap/less/bootstrap.less";
+
+//
+// Variables
+// --------------------------------------------------
+
+@clrs-red: #FF4136;
+@clrs-green: #2ECC40;
+@icon-font-path: "../components/bootstrap/fonts/";
+
+//
+// Fonts
+// --------------------------------------------------
+
+@font-face {
+  font-family: 'Sigmar One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sigmar One'), local('SigmarOne'), url(http://fonts.gstatic.com/s/sigmarone/v6/aRAZJs6CY7SV6eSg6Wx4jwzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+//
+// General
+// --------------------------------------------------
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top: 40px;
+}
+
+body > footer {
+  margin-bottom: 30px;
+}
+
+//
+// Navbar
+// --------------------------------------------------
+
+.navbar-brand strong {
+  font-family: "Sigmar One", @font-family-sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.navbar-brand {
+  font-weight: 100;
+}
+
+//
+// Page Header
+// --------------------------------------------------
+
+.page-header h1 {
+  font-weight: 100;
+  text-align: center;
+}
+
+//
+// Forms
+// --------------------------------------------------
+
+.navbar-left .form-group {
+  margin-right: 15px;
+}
+/*
+.ng-invalid.ng-dirty {
+  border-color: @clrs-red;
+  outline-color: @clrs-red;
+}
+
+.ng-valid.ng-dirty {
+  border-color: @clrs-green;
+  outline-color: @clrs-green;
+}
+*/
+//
+// Burgers
+// --------------------------------------------------
+
+
+// Carousel
+// ---------------------------
+
+.burger-carousel {
+  position: absolute;
+  top: 50px; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  background-color: @clrs-red;
+}
+
+.burger-carousel .carousel-inner,
+.burger-carousel .item {
+  height: 100%;
+  overflow: hidden;
+}
+
+.burger-carousel img {
+  display: block;
+  margin: 10% auto 0;
+}
+
+.burger-carousel .carousel-indicators li {
+  margin: 0 5px;
+}
+
+// Burger List
+// ---------------------------
+
+.burger-list {
+  margin-top: -30px;
+}
+
+.burger-list [class^="col-"] {
+  margin-top: 30px;
+}
+
+// Responsive Burger List
+
+@media screen and (min-width: @screen-xs) and (max-width: @screen-sm) {
+  .burger-list li:nth-child(2n + 1) {
+    clear: left;
+  }
+}
+
+@media screen and (min-width: @screen-sm) and (max-width: @screen-md) {
+  .burger-list li:nth-child(3n + 1) {
+    clear: left;
+  }
+}
+
+@media screen and (min-width: @screen-md) {
+  .burger-list li:nth-child(4n + 1) {
+    clear: left;
+  }
+}
+
+// Burger Item
+
+.burger-list .burger {
+  position: relative;
+  display: block;
+  min-height: 340px;
+  padding: 5px;
+  color: inherit;
+  text-align: center;
+  border-radius: 8px;
+  background-color: @gray-lighter;
+  &:hover {
+    text-decoration: none;
+    background-color: @clrs-red;
+  }
+}
+
+.burger-list .alert {
+  margin-top: 30px;
+}
+
+.burger-list .burger-header {
+  font-weight: 100;
+}
+
+.burger-list .burger-meta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+.burger-list .burger-meta dt {
+  margin-top: 10px;
+}
+.burger-list .burger img {
+
+}
+
+.burger-ingredients {
+  margin-top: 20px;
+}
+
+// Burger Detail
+// ---------------------------
+
+.burger-detail .burger-image {
+  text-align: center;
+}
+.burger-detail .burger-image img {
+  display: inline-block;
+}
+
+.burger-detail .burger-description {
+  padding-top: 20px;
+  font-size: 24px;
+}
+
+.burger-detail .burger-meta {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 1px solid @gray-lighter;
+  overflow: hidden;
+}
+
+.burger-detail .burger-meta dt {
+  float: left;
+  width: 80px;
+  margin-right: 10px;
+}
+
+//
+// Ingredients
+// --------------------------------------------------
+
+// Ingredient List
+// ---------------------------
+
+.ingredient-list {
+  margin-top: -30px;
+}
+
+.ingredient-list [class^="col-"] {
+  margin-top: 30px;
+}
+
+// Responsive Ingredient List
+
+@media screen and (min-width: @screen-xs) and (max-width: @screen-sm) {
+  .ingredient-list li:nth-child(2n + 1) {
+    clear: left;
+  }
+}
+
+@media screen and (min-width: @screen-sm) and (max-width: @screen-md) {
+  .ingredient-list li:nth-child(4n + 1) {
+    clear: left;
+  }
+}
+
+@media screen and (min-width: @screen-lg) {
+  .ingredient-list li:nth-child(6n + 1) {
+    clear: left;
+  }
+}
+
+// Ingredient Item
+
+.ingredient-list .ingredient {
+  position: relative;
+  height: 110px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: @gray-lighter;
+  &:hover {
+    background-color: @clrs-red;
+  }
+}
+
+.ingredient-actions {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+}
+
+.ingredient-header {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
