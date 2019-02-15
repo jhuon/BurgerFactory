@@ -1,11 +1,4 @@
-Burger Factory est une application fictive réalisée pour Aquafadas.
-
-Réalisé par Julien Huon
-10 rue Saint-Claude
-34000 Montpellier
-06 88 58 51 19
-julien.huon@gmail.com
-www.julienhuon.com
+Burger Factory est une application fictive de test.
 
 Front-end
 ====================
